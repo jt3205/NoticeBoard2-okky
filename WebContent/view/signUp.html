@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hyeong Jin's Okky</title>
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+		}
+		
+		#main{
+			width: 400px;
+			margin-top: 220px;
+			border: solid 1px;
+		}
+
+		#logoBox{
+			width: 100%;
+			height: 100px;
+			background: #0059ab;
+			
+			text-align: center;
+		}
+		#logoBox > img {
+			margin-top: 10px;
+		}
+		#logoBox > h3{
+			color: white;
+			margin-top: 10px;
+		}
+
+		#loginBox{
+			width: 100%;
+			height: 180px;
+		}
+		#loginBox > form {
+			width: 80%;
+			text-align : center;
+			padding-top: 30px;
+		}
+		.input {
+			width: 100%;
+			height: 30px;
+			font-size: 16px;
+		}
+		#login{
+			width: 324px;
+			height: 40px;
+			font-size: 16px;
+			color: #FFFFFF;
+			background: #0059ab; 
+		    border:solid 1px #ccc;
+		    border-radius: 10px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+
+		#subBox{
+			width: 100%;
+			height: 30px;
+			text-align: center;
+			margin-top: 115px;
+			margin-bottom: 20px;
+		}
+
+		a{
+			text-decoration:none;
+		}
+
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="logoBox">
+			<img src="./image/logo.png">
+			<h3>회원 가입</h3>		
+		</div>
+		<div id="loginBox">
+			<form method="POST" action="signUp_proc.jsp">
+				<input type="text" name="id" placeholder=" 아이디" maxlength="20" class="input">
+				<input type="password" name="password" placeholder=" 비밀번호" maxlength="20" class="input">
+				<input type="text" name="nickname" placeholder=" 닉네임" maxlength="20" class="input">
+				<input type="text" name="question" placeholder=" 질문" maxlength="20" class="input">
+				<input type="text" name="answer" placeholder=" 답" maxlength="20" class="input">
+				<input type="submit" id="login" value="회원가입"></input>
+			</form>
+		</div>
+		<div id="subBox">
+			<a href="login.html">로그인</a>
+			&nbsp;&nbsp;/&nbsp;&nbsp;
+			<a href="#">계정찾기</a>
+		</div>
+	</div>
+</body>
+</html>
