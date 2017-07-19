@@ -40,7 +40,7 @@ public class DBUtil {
 		}
 	}
 	
-	public static void close( Connection con,PreparedStatement pstmt, ResultSet rs) {
+	public static void close( Connection con, PreparedStatement pstmt, ResultSet rs) {
 		close(con, pstmt);
 		try {
 			if(rs != null && !rs.isClosed())

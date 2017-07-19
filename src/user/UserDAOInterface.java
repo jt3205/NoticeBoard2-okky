@@ -5,3 +5,4 @@ public interface UserDAOInterface {
 	boolean login(String id, String password);
 	
 }
+

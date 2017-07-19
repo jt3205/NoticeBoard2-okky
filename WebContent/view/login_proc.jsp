@@ -9,7 +9,7 @@
 	vo.setPassword(request.getParameter("password"));
 	
 	if(new UserService().login(vo)){
-		response.sendRedirect("articles.jsp?kind=community");
+		response.sendRedirect("articles.jsp?kind=1");
 	}
 	else{
 		out.println("<script>alert('로그인 실패!!');</script>");

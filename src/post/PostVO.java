@@ -8,6 +8,7 @@ public class PostVO {
 	String tags;
 	String kind;
 	
+	
 	public int getSeq() {
 		return seq;
 	}
