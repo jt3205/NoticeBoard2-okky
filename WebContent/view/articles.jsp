@@ -93,23 +93,81 @@
 		}
 		#content-nav > h4 {
 			float: left;
-		}
-		#content-nav > #bt_newPost {
-			background: #5cb85c;
-			width: 130px;
-			height: 35px;
-			float: right;
+			margin-top: 30px;
+			margin-left: 28px;
 		}
 		#sortBox {
 			height: 50px;
 			width: 300px;
+			float: left;
+			margin-top: 58px;
+			margin-left: -77px;
 		}
 		#sortBox > li {
 			list-style: none;
 			float: left;
 		}
-		#input_search {
+		#sortBox > li > a {
+			color: #BBB;
+			text-decoration: none;
+			font-size: 13px;
+			margin-right: 15px;
 			
+		}
+		#searchBox {
+			float: right;	
+			margin-top: 20px;
+			width: 375px;
+			height: 24px;
+			border: solid 1px;
+		}
+		#searchBox > a {
+			background: white;
+    		width: 24px;
+   		 	height: 24px;
+		}
+		#searchBox > a > img {
+			width: 20px;
+			height: 20px;
+		}
+		#input_search {
+			height: 18px;
+			width: 340px;
+		}
+		#content-nav {
+			width: 100%;
+			height: 100px;
+		}
+		#bt_newPost {
+			background: #5cb85c;
+			width: 130px;
+			height: 35px;
+			float: right;
+			margin-top: 25px;
+			border-radius: 7px;
+			cursor: pointer;
+			text-align: center;
+			padding-top: 7px;
+			box-sizing: border-box;
+			color: white;
+			text-decoration: none;
+		}
+		#bt_newPost:hover {
+			background: #398439;
+		}
+		#content-main {
+			width: 765px;
+			margin-top: 30px;
+		}
+		#boardList {
+			width: 100%;
+			margin-left: -20px;
+		}
+		.boardPreview{
+			height: 50px;
+			border: solid 1px #BBB;
+			list-style: none;
+			margin-left: -10px;
 		}
 	</style>
 </head>
@@ -282,8 +340,19 @@
 				<li><a href="articles.jsp?kind=<%=kind%>&sort=scrap">스크랩순</a></li>
 				<li><a href="articles.jsp?kind=<%=kind%>&sort=lookup">조회순</a></li>
 			</ul>
-			<input type="text" id="input_search" name="search" placeholder="검색어">
-			
+			<div id="searchBox">
+				<input type="text" id="input_search" name="search" placeholder="검색어">
+				<a href=""><img src="./image/searchIcon.png"></a>
+			</div>
+		</div>
+		<div id="content-main">
+			<ul id="boardList">
+				<% for(int i = 0; i < 20; i++){%>
+					<li class="boardPreview">
+						
+					</li>
+				<% }%>
+			</ul>
 		</div>
 	</div>
 </body>
