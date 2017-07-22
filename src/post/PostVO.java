@@ -1,13 +1,13 @@
 package post;
 
 public class PostVO {
-	int seq;
-	String title;
-	int writer;
-	String content;
-	String tags;
-	String kind;
-	
+	private int seq;
+	private String title;
+	private int writer;
+	private String content;
+	private String tags;
+	private String kind;
+	private int views;
 	
 	public int getSeq() {
 		return seq;
@@ -44,5 +44,11 @@ public class PostVO {
 	}
 	public void setKind(String kind) {
 		this.kind = kind;
+	}
+	public int getViews() {
+		return views;
+	}
+	public void setViews(int views) {
+		this.views = views;
 	}
 }
