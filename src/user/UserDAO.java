@@ -26,7 +26,6 @@ public class UserDAO implements UserDAOInterface{
 			pstmt.setString(5, answer);
 			pstmt.execute();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		DBUtil.close(con,pstmt);
@@ -48,7 +47,6 @@ public class UserDAO implements UserDAOInterface{
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		DBUtil.close(con,pstmt,rs);

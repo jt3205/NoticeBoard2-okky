@@ -27,6 +27,8 @@ public class PostDAO implements PostDAOInterface {
 			pstmt.setString(4, kind);
 			
 			pstmt.execute();
+			
+			DBUtil.close(con, pstmt);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -39,33 +41,30 @@ public class PostDAO implements PostDAOInterface {
 			pstmt = con.prepareStatement(DELETE_POST);
 			pstmt.setInt(1, seq);
 			pstmt.execute();
+			DBUtil.close(con, pstmt);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	@Override
 	public PostVO getPost(int seq) {
+		PostVO vo = new PostVO();
 		con = DBUtil.getConnection();
 		try {
 			pstmt = con.prepareStatement(GET_POST);
 			pstmt.setInt(1, seq);
 			rs = pstmt.executeQuery();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		PostVO vo = new PostVO();
-		try {
+		
 			vo.setSeq(rs.getInt(1));
 			vo.setTitle(rs.getString(2));
 			vo.setWriter(rs.getInt(3));
 			vo.setContent(rs.getString(4));
 			vo.setKind(rs.getString(5));
 			vo.setViews(rs.getInt(6));
+			
+			DBUtil.close(con, pstmt, rs);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return vo;
